@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>BeSol Grupp</title>
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <link
+            href="styles/styles.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <nav class="navigation">
+            <div class="container">
+                <div class="navigation__content-wrapper">
+                    <a
+                        href="./"
+                        class="navigation__logo"
+                    >
+                        BeSol Grupp
+                    </a>
+                    <input
+                        class="navigation__toggle"
+                        id="navigation__toggle"
+                        type="checkbox"
+                    />
+                    <label
+                        class="navigation__button"
+                        for="navigation__toggle"
+                    >
+                        <span class="navigation__line"></span>
+                        <span class="navigation__line"></span>
+                        <span class="navigation__line"></span>
+                    </label>
+                    <div class="navigation__links-wrapper">
+                        <div class="navigation__left-section">
+                            <a
+                                onClick="closeNavigation()"
+                                class="navigation__link"
+                                href="#aboutUs"
+                            >
+                                About us
+                            </a>
+                            <a
+                                onClick="closeNavigation()"
+                                class="navigation__link"
+                                href="#expertise"
+                            >
+                                Our expertise
+                            </a>
+                            <a
+                                onClick="closeNavigation()"
+                                class="navigation__link"
+                                href="#caseStudies"
+                            >
+                                Case studies
+                            </a>
+                            <a
+                                onClick="closeNavigation()"
+                                class="navigation__link"
+                                href="#clients"
+                            >
+                                Clients
+                            </a>
+                            <a
+                                onClick="closeNavigation()"
+                                class="navigation__link"
+                                href="#reviews"
+                            >
+                                Reviews
+                            </a>
+                            <a
+                                onClick="closeNavigation()"
+                                class="navigation__link"
+                                href="#team"
+                            >
+                                Team
+                            </a>
+                        </div>
+                        <div class="navigation__right-section">
+                            <a href="#feedback">
+                                <button>Contact us</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="header">
+            <div class="container">
+                <h1>Your reliable partner for successful IT projects</h1>
+                <p class="header__subtitle">Bring your software initiatives into reality with cutting-edge technology and unmatched expertise</p>
+                <a href="#feedback">
+                    <button>Get started</button>
+                </a>
+                <picture>
+                    <source
+                        media="(max-width:650px)"
+                        srcset=""
+                    />
+                    <img
+                        src="img/header_img-1.png"
+                        alt="img"
+                    />
+                </picture>
+                <picture>
+                    <source
+                        media="(max-width:650px)"
+                        srcset=""
+                    />
+                    <img
+                        src="img/header_img-2.png"
+                        alt="img"
+                    />
+                </picture>
+                <picture>
+                    <source
+                        media="(max-width:650px)"
+                        srcset=""
+                    />
+                    <img
+                        src="img/header_img-3.png"
+                        alt="img"
+                    />
+                </picture>
+                <picture>
+                    <source
+                        media="(max-width:650px)"
+                        srcset=""
+                    />
+                    <img
+                        src="img/header_img-4.svg"
+                        alt="img"
+                    />
+                </picture>
+                <picture>
+                    <source
+                        media="(max-width:650px)"
+                        srcset=""
+                    />
+                    <img
+                        src="img/header_img-5.svg"
+                        alt="img"
+                    />
+                </picture>
+            </div>
+            <div class="header__items-wrapper">
+                <div class="item">
+                    <h3>25+ talented tech experts</h3>
+                    <p>With experience across various industries and technologies, working fully remotely</p>
+                </div>
+                <div class="item">
+                    <h3>10+ Years of experience</h3>
+                    <p>In providing innovative enterprise solutions tailored to your business needs</p>
+                </div>
+                <div class="item">
+                    <h3>200+ Happy clients</h3>
+                    <p>
+                        200+ happy clientsIncluding SMEs and large-scale corporations from financial, green energy, e-Commerce, retail, automotive, and telecom
+                        industries
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="aboutUs"
+            id="aboutUs"
+        >
+            <div class="container">
+                <div class="aboutUs__left-side">
+                    <h2 class="aboutUs__title">About us</h2>
+                    <p class="aboutUs__subtitle">
+                        BeSol Grupp OÜ software development company was established in Tallinn, Estonia in 2021 by Oleg Besman. With 10+ years of experience in
+                        various industry sectors, we have a clear understanding of managing complex technical processes and can provide efficient software
+                        solutions. Our team of 25+ highly qualified programmers operates as a fully distributed remote workforce, ensuring seamless
+                        collaboration and exceptional results.
+                    </p>
+                    <div class="aboutUs__comment-wrapper">
+                        <picture class="photo">
+                            <source
+                                media="(max-width:650px)"
+                                srcset=""
+                            />
+                            <img
+                                src="img/Oleg_Besman-photo.png"
+                                alt="Oleg Besman photo"
+                            />
+                        </picture>
+                        <div class="comment">
+                            <p class="comment__text">
+                                “Our primary focus lies in the development of enterprise solutions catering to logistics, banking, healthcare, automotive,
+                                manufacturing, and other industries. We are proud to work with such renowned companies as Carl Zeiss, GEA, and Lufthansa to help
+                                them meet the growing demand for digital transformation and stay competitive and innovative in their industries.”
+                            </p>
+                            <h3>Oleg Besman, CEO</h3>
+                        </div>
+                    </div>
+                </div>
+                <picture class="aboutUs__workspace-img">
+                    <source
+                        media="(max-width:650px)"
+                        srcset=""
+                    />
+                    <img
+                        src="img/about_us-img.png"
+                        alt="img"
+                    />
+                </picture>
+            </div>
+        </section>
+
+        <section
+            class="expertise"
+            id="expertise"
+        >
+            <div class="container">
+                <div class="expertise__title-wrapper">
+                    <h2>Our expertise</h2>
+                    <p class="subtitle">
+                        We specialize in providing tailored solutions for businesses, ranging from cloud computing and cybersecurity to data analytics and
+                        software development. Let us empower your business with our expertise.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="programmingLanguages"
+            id="programmingLanguages"
+        >
+            <div class="container">
+                <h2>Programming languages</h2>
+                <p class="subtitle">We integrate the power of diverse programming languages to build robust and scalable software solutions.</p>
+                <img
+                    src="img/programming_languages-img.svg"
+                    alt="Programming languages"
+                />
+            </div>
+        </section>
+
+        <section
+            class="caseStudies"
+            id="caseStudies"
+        >
+            <div class="container">
+                <h2 class="projects__title">Case studies</h2>
+                <p class="subtitle">Explore our showcases and discover how we can help your business thrive.</p>
+
+                <div class="swiper-buttons caseStudies__swiper-buttons">
+                    <div class="swiper-button-prev2">
+                        <svg
+                            width="49"
+                            height="48"
+                            viewBox="0 0 49 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <rect
+                                x="48.666"
+                                width="48"
+                                height="48"
+                                rx="24"
+                                transform="rotate(90 48.666 0)"
+                                fill="#F1F2F7"
+                            />
+                            <path
+                                d="M17.166 27L24.666 19.5L32.166 27"
+                                stroke="#1C2321"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next2">
+                        <svg
+                            width="49"
+                            height="48"
+                            viewBox="0 0 49 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <rect
+                                x="48.666"
+                                width="48"
+                                height="48"
+                                rx="24"
+                                transform="rotate(90 48.666 0)"
+                                fill="#F1F2F7"
+                            />
+                            <path
+                                d="M17.166 27L24.666 19.5L32.166 27"
+                                stroke="#1C2321"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+                </div>
+                <div class="swiper caseStudies__swiper">
+                    <div class="swiper-wrapper caseStudies__swiper-wrapper">
+                        <div class="swiper-slide caseStudies__swiper-slide block-thumbnail">
+                            <p class="caseStudies__slide-text">
+                                Healthcare information was scattered across different systems, making it difficult for providers to access and share
+                                comprehensive patient records...
+                            </p>
+                        </div>
+                        <div class="swiper-slide caseStudies__swiper-slide block-thumbnail">
+                            <p class="caseStudies__slide-text">
+                                Our client, GEA Group AG, utilizes MS Azure as its infrastructure provider and needs an immense amount of cloud
+                                resources/services worth millions of dollars...
+                            </p>
+                        </div>
+                        <div class="swiper-slide caseStudies__swiper-slide block-thumbnail">
+                            <p class="caseStudies__slide-text">
+                                A client requested a solution migration from AWS to Azure. This involved transferring multiple microservices, database, and
+                                storage (from S3 to ...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="clients"
+            id="clients"
+        >
+            <div class="container">
+                <div class="clients__left-part">
+                    <h2>Clients</h2>
+                    <p class="subtitle">
+                        We help our clients successfully achieve their strategic goals and overcome their toughest technological challenges. Our services
+                        deliver impactful, long-term results with unbeatable value.
+                    </p>
+                </div>
+                <div class="clients__right-part">
+                    <div class="clients__row">
+                        <div>
+                            <img
+                                src="img/Tesla_logo.svg"
+                                alt="Tesla"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src="img/Google_logo.svg"
+                                alt="Google"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src="img/Fedex_logo.svg"
+                                alt="Fedex"
+                            />
+                        </div>
+                    </div>
+                    <div class="clients__row">
+                        <div>
+                            <img
+                                src="img/Accenture_logo.svg"
+                                alt="Accenture"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src="img/Honda_logo.svg"
+                                alt="Honda"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src="img/TikTok_logo.svg"
+                                alt="TikTok"
+                            />
+                        </div>
+                    </div>
+                    <div class="clients__row">
+                        <div>
+                            <img
+                                src="img/NTT_logo.svg"
+                                alt="NTT"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src="img/Verizon_logo.svg"
+                                alt="Verizon"
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src="img/Intel_logo.svg"
+                                alt="Intel"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="reviews"
+            id="reviews"
+        >
+            <div class="container">
+                <h2 class="reviews__title">Reviews</h2>
+                <p>
+                    At BeSol Grupp OÜ, we recognize that selecting a service provider can be a challenging task, with many choices available. That's why we
+                    strive to stand out by offering exceptional service and results that speak for themselves.
+                </p>
+                <h1 style="color: black">In Progress</h1>
+            </div>
+        </section>
+
+        <section
+            class="team"
+            id="team"
+        >
+            <div class="container">
+                <h2>Team</h2>
+                <p class="team__subtitle">
+                    We are growing a team of 25+ highly skilled dedicated engineers. By working remotely, we are able to maintain flexibility and efficiency in
+                    our work, ensuring that our clients receive the best possible service.
+                </p>
+                <picture>
+                    <source
+                        media="(max-width:650px)"
+                        srcset=""
+                    />
+                    <img
+                        src="img/team_img.png"
+                        alt="img"
+                    />
+                </picture>
+            </div>
+        </section>
+
+        <section
+            class="feedback"
+            id="feedback"
+        >
+            <div class="container">
+                <div class="feedback__left-part">
+                    <h2>We are here to help you grow your business</h2>
+
+                    <a
+                        class="feedback__link-wrapper"
+                        href="mailto:oleg.besman@besol-grupp.eu"
+                    >
+                        <img
+                            src="img/feedback_mail-icon.svg"
+                            alt="mail"
+                        />
+                        <p>oleg.besman@besol-grupp.eu</p>
+                    </a>
+                    <div class="feedback__link-wrapper">
+                        <img
+                            src="img/feedback_map-icon.svg"
+                            alt="mail"
+                        />
+                        <p>Peterburi tee.46-227 11415 Tallinn</p>
+                    </div>
+                    <a
+                        class="feedback__link-wrapper"
+                        href="tel:+37256060079"
+                    >
+                        <img
+                            src="img/feedback_phone-icon.svg"
+                            alt="mail"
+                        />
+                        <p>+372 56 06 0079</p>
+                    </a>
+                </div>
+                <form
+                    class="feedback__form"
+                    method="POST"
+                    action=""
+                >
+                    <h3>Arrange meeting with the team</h3>
+                    <div class="input-wrapper feedback__input-wrapper">
+                        <input
+                            placeholder=" "
+                            id="form__name"
+                            type="text"
+                            name="name"
+                            minlength="2"
+                            required
+                        />
+                        <label for="form__name">Name</label>
+                    </div>
+                    <div class="input-wrapper feedback__input-wrapper">
+                        <input
+                            placeholder=" "
+                            id="form__email"
+                            inputmode="email"
+                            type="email"
+                            name="email"
+                            minlength="5"
+                            required
+                        />
+                        <label for="form__email">E-mail</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <textarea
+                            class="feedback__textarea"
+                            placeholder=" "
+                            id="form__text"
+                            inputmode="text"
+                            name="text"
+                            minlength="2"
+                            required
+                        ></textarea>
+                        <label for="form__text">Message</label>
+                    </div>
+                    <input
+                        class="feedback__button button--yellow"
+                        id="form__submit"
+                        type="submit"
+                        value="Send"
+                    />
+                </form>
+            </div>
+        </section>
+
+        <section class="openPositions">
+            <div class="container">
+                <h2>Open positions</h2>
+                <div class="openPositions__position-wrapper">
+                    <h3>Senior Front-End Developer</h3>
+                    <div class="openPositions__details-wrapper">
+                        <div>
+                            <img
+                                src="img/clock_icon.svg"
+                                alt="clock"
+                            />
+                            <p>Full time</p>
+                        </div>
+                        <div>
+                            <img
+                                src="img/MapPin-blue_icon.svg"
+                                alt="Map Pin"
+                            />
+                            <p>100% Remote</p>
+                        </div>
+                    </div>
+                    <button>Details</button>
+                </div>
+                <div class="openPositions__position-wrapper">
+                    <h3>Junior Front-End Developer</h3>
+                    <div class="openPositions__details-wrapper">
+                        <div>
+                            <img
+                                src="img/clock_icon.svg"
+                                alt="clock"
+                            />
+                            <p>Full time</p>
+                        </div>
+                        <div>
+                            <img
+                                src="img/MapPin-blue_icon.svg"
+                                alt="Map Pin"
+                            />
+                            <p>100% Remote</p>
+                        </div>
+                    </div>
+                    <button>Details</button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__logoSection">
+                    <a
+                        href="./"
+                        class="footer__logo"
+                    >
+                        BeSol Grupp
+                    </a>
+                    <p class="footer__policy">Copyright © 2023 BeSol Grupp OÜ. All rights reserved.</p>
+                </div>
+                <div class="footer__section">
+                    <div class="footer__address">
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M10 10.625C11.3807 10.625 12.5 9.50571 12.5 8.125C12.5 6.74429 11.3807 5.625 10 5.625C8.61929 5.625 7.5 6.74429 7.5 8.125C7.5 9.50571 8.61929 10.625 10 10.625Z"
+                                stroke="#747581"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M16.25 8.125C16.25 13.75 10 18.125 10 18.125C10 18.125 3.75 13.75 3.75 8.125C3.75 6.4674 4.40848 4.87769 5.58058 3.70558C6.75269 2.53348 8.3424 1.875 10 1.875C11.6576 1.875 13.2473 2.53348 14.4194 3.70558C15.5915 4.87769 16.25 6.4674 16.25 8.125V8.125Z"
+                                stroke="#747581"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                        <p>Peterburi tee.46-227 11415 Tallinn</p>
+                    </div>
+                    <div class="footer__links-wrapper">
+                        <a
+                            class="footer__link"
+                            href="tel:+37256060079"
+                        >
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M7.22656 9.75015C7.8697 11.0783 8.94366 12.1495 10.2734 12.7892C10.3715 12.8357 10.48 12.8558 10.5882 12.8475C10.6965 12.8393 10.8007 12.8031 10.8906 12.7423L12.8437 11.4376C12.93 11.3791 13.0298 11.3434 13.1336 11.3338C13.2374 11.3243 13.342 11.3412 13.4375 11.383L17.0938 12.9533C17.2187 13.0053 17.3231 13.0969 17.3909 13.2141C17.4586 13.3313 17.486 13.4675 17.4688 13.6017C17.3529 14.5062 16.9114 15.3375 16.2269 15.94C15.5424 16.5425 14.6619 16.8749 13.75 16.8751C10.9321 16.8751 8.22956 15.7557 6.23699 13.7632C4.24442 11.7706 3.125 9.06807 3.125 6.25015C3.12521 5.33827 3.45767 4.45771 4.06018 3.77324C4.66269 3.08877 5.49395 2.64728 6.39844 2.5314C6.53269 2.51415 6.66888 2.54152 6.78605 2.60928C6.90322 2.67704 6.99487 2.78144 7.04687 2.9064L8.61719 6.57046C8.65802 6.66448 8.67511 6.7671 8.66693 6.86928C8.65876 6.97146 8.62558 7.07006 8.57031 7.1564L7.26562 9.14077C7.20754 9.23053 7.17345 9.33368 7.16661 9.44037C7.15977 9.54705 7.18041 9.65371 7.22656 9.75015V9.75015Z"
+                                    stroke="#747581"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <p>+372 56 06 0079</p>
+                        </a>
+                        <a
+                            class="footer__link"
+                            href="mailto:oleg.besman@besol-grupp.eu"
+                        >
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 20 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M17.5 4.375L10 11.25L2.5 4.375"
+                                    stroke="#1C1C23"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M2.5 4.375H17.5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H3.125C2.95924 15.625 2.80027 15.5592 2.68306 15.4419C2.56585 15.3247 2.5 15.1658 2.5 15V4.375Z"
+                                    stroke="#1C1C23"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M8.63281 10L2.69531 15.4453"
+                                    stroke="#1C1C23"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.3047 15.4453L11.3672 10"
+                                    stroke="#1C1C23"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <p>oleg.besman@besol-grupp.eu</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__privacy-section">
+                    <a
+                        class="footer__link terms"
+                        href="terms-of-use.html"
+                    >
+                        <p>Terms & Conditions</p>
+                    </a>
+                    <a
+                        class="footer__link"
+                        href="privacy-policy.html"
+                    >
+                        <p>Privacy policy</p>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <div class="modal">
+            <div class="modal__content-wrapper">
+                <div class="modal__text"></div>
+                <img class="modal__image" />
+                <div class="modal__close">
+                    <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M18.166 18.1664L29.8333 29.8336"
+                            stroke="#1932E0"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M29.834 18.1664L18.1667 29.8336"
+                            stroke="#1932E0"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <rect
+                            x="1"
+                            y="1"
+                            width="46"
+                            height="46"
+                            rx="23"
+                            stroke="#1932E0"
+                            stroke-width="2"
+                        />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const modalEle = document.querySelector(".modal");
+            const modalImage = document.querySelector(".modal__image");
+            const captionText = document.querySelector(".modal__text");
+            Array.from(document.querySelectorAll(".img-thumbnail")).forEach((item) => {
+                item.addEventListener("click", (event) => {
+                    modalEle.style.display = "block";
+                    modalImage.src = event.target.src;
+                });
+            });
+
+            Array.from(document.querySelectorAll(".block-thumbnail")).forEach((item) => {
+                item.addEventListener("click", (event) => {
+                    modalEle.style.display = "block";
+                    const clone = event.target.cloneNode(true);
+                    captionText.appendChild(clone);
+                });
+            });
+
+            document.querySelector(".modal__close").addEventListener("click", () => {
+                modalEle.style.display = "none";
+                captionText.innerHTML = "";
+                modalImage.src = "";
+            });
+        </script>
+
+        <script type="module">
+            import Swiper from "./swiper-bundle.esm.browser.min.js";
+
+            const certifications__swiper = new Swiper(".certifications__swiper", {
+                speed: 400,
+                spaceBetween: 0,
+                freeMode: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "bullets",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                slidesPerView: "auto",
+                direction: "horizontal",
+
+                breakpoints: {
+                    1280: {
+                        direction: "vertical",
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    650: {
+                        freeMode: false,
+                    },
+                },
+            });
+
+            const caseStudies__swiper = new Swiper(".caseStudies__swiper", {
+                speed: 400,
+                spaceBetween: 12,
+                navigation: {
+                    nextEl: ".swiper-button-next2",
+                    prevEl: ".swiper-button-prev2",
+                },
+                direction: "horizontal",
+                slidesPerView: "auto",
+
+                breakpoints: {
+                    1280: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                },
+            });
+
+            const services__swiper = new Swiper(".services__swiper", {
+                speed: 400,
+                spaceBetween: 12,
+                direction: "horizontal",
+                slidesPerView: "auto",
+            });
+        </script>
+        <script>
+            function closeNavigation() {
+                document.getElementById("navigation__toggle").checked = false;
+            }
+        </script>
+    </body>
+</html>

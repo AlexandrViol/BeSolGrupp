@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'IBMPlexMonoRegular';
+  src: url("../fonts/ibmplexmono.woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'IBMPlexMonoRSemiBold';
+  src: url("../fonts/ibmplexmonosemibold.woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+html {
+  font-family: 'IBMPlexMonoRegular', sans-serif;
+  color: $black;
+}
+
+h1 {
+  font-family: 'IBMPlexMonoRSemiBold', sans-serif;
+  font-size: 48px;
+  line-height: 50.4px;
+  color: $white;
+  max-width: 612px;
+  text-align: center;
+  margin: 0 auto;
+
+  @include md {
+    font-size: 42px;
+    line-height: 52px;
+  }
+  @include sm {
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+  }
+}
+
+h2 {
+  font-family: 'IBMPlexMonoRSemiBold', sans-serif;
+  font-size: 36px;
+  line-height: normal;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+  color: $black;
+
+  @include sm {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+h3 {
+  font-family: 'IBMPlexMonoRSemiBold', sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  color: $black;
+
+  @include md {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  @include sm {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 22px;
+  color: $black;
+}
