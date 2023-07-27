@@ -31,9 +31,9 @@
                         class="navigation__button"
                         for="navigation__toggle"
                     >
-                        <span class="navigation__line"></span>
-                        <span class="navigation__line"></span>
-                        <span class="navigation__line"></span>
+                        <div class="navigation__line"></div>
+                        <div class="navigation__line"></div>
+                        <div class="navigation__line"></div>
                     </label>
                     <div class="navigation__links-wrapper">
                         <div class="navigation__left-section">
@@ -184,6 +184,16 @@
             <div class="container">
                 <div class="aboutUs__left-side">
                     <h2 class="aboutUs__title">About us</h2>
+                    <picture class="aboutUs__workspace-img mobile">
+                        <source
+                            media="(max-width:650px)"
+                            srcset=""
+                        />
+                        <img
+                            src="img/about_us-img.png"
+                            alt="img"
+                        />
+                    </picture>
                     <p class="aboutUs__subtitle">
                         BeSol Grupp OÜ software development company was
                         established in Tallinn, Estonia in 2021 by Oleg Besman.
@@ -221,7 +231,7 @@
                         </div>
                     </div>
                 </div>
-                <picture class="aboutUs__workspace-img">
+                <picture class="aboutUs__workspace-img desktop">
                     <source
                         media="(max-width:650px)"
                         srcset=""
@@ -2195,7 +2205,7 @@
 
             const reviews__swiper = new Swiper(".reviews__swiper", {
                 speed: 400,
-                spaceBetween: 0,
+                spaceBetween: 12,
                 // width: 666,
                 // freeMode: true,
                 navigation: {
@@ -2221,7 +2231,7 @@
                     prevEl: ".swiper-button-prev2",
                 },
                 direction: "horizontal",
-                slidesPerView: 2,
+                slidesPerView: 1,
 
                 breakpoints: {
                     1280: {
@@ -2231,12 +2241,12 @@
                 },
             });
 
-            const services__swiper = new Swiper(".services__swiper", {
-                speed: 400,
-                spaceBetween: 12,
-                direction: "horizontal",
-                slidesPerView: "auto",
-            });
+            // const services__swiper = new Swiper(".services__swiper", {
+            //     speed: 400,
+            //     spaceBetween: 12,
+            //     direction: "horizontal",
+            //     slidesPerView: "auto",
+            // });
         </script>
 
         <script>

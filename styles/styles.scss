@@ -1,26 +1,13 @@
-$bg: #26272c; //
 $black: #1c1c23;
 $main: #0013ff;
 $blue: #adb3ff;
 $darkBlue: #141d93;
 $overlay: #f8f8ff;
-$background-circle: #3b3c43; //
 $white: #ffffff;
-$header-divider: #595a64; //
 $gray: #c2c3cc;
 $gray2: #747581;
-$secondary: #ffc700; //
-$secondaryHover: #ffdc60; //
-$borderBlue: #e7eaff; //
-
-$linkHover: #475cef; //
-$lightHover: #2539a5; //
-$darkHover: #4044ff; //
-
-$error: red; //
-$input: #2539a5; //
-$inputText: #9cabff; //
-$divider: #d7d7e1; //
+$error: red;
+$divider: #d7d7e1; 
 
 @import "./resetBrowserStyles";
 @import "./common";
@@ -37,6 +24,11 @@ section {
     &:first-of-type {
         margin-top: 85px;
         padding-top: 0;
+    }
+
+    @include lg {
+        margin-top: 5px;
+        padding-top: 75px;
     }
 
     @include sm {
@@ -61,11 +53,21 @@ section {
         align-items: center;
 
         @include lg {
+            padding-top: 116px;
+            padding-bottom: 146px;
+            margin: 0 auto;
+            width: calc(100% - 40px);
+            background-size: 100% 100%;
+
+
             align-items: center;
         }
+
         @include sm {
             flex-direction: column;
             justify-content: center;
+
+            width: calc(100% - 32px);
         }
     }
 
@@ -92,9 +94,19 @@ section {
         margin: 0 auto;
         transform: translateY(-58px);
 
+        @include lg {
+            flex-direction: column;
+            transform: translateY(-32px);
+            max-width: 700px;
+        }
+
         .item {
             padding: 42px 32px 28px 84px;
             flex: 1;
+
+            @include lg {
+                padding: 24px 24px 24px 76px;
+            }
 
             &:before {
                 position: absolute;
@@ -102,6 +114,11 @@ section {
                 left: 32px;
                 width: 40px;
                 height: 40px;
+
+                @include lg {
+                    top: 24px;
+                    left: 24px;
+                }
             }
 
             &:first-child {
@@ -116,6 +133,13 @@ section {
 
                 &:before {
                     content: url(../img/header_item-2.svg);
+                }
+
+                @include lg {
+                    border-left: unset;
+                    border-right: unset;
+                    border-top: 1px solid $main;
+                    border-bottom: 1px solid $main;
                 }
             }
 
@@ -147,6 +171,17 @@ section {
             height: 208px;
             top: 60px;
             left: -120px;
+
+            @include lg {
+                width: 148px;
+                height: 88px;
+                top: 16px;
+                left: -20px;
+            }
+
+            @include sm {
+                left: -16px;
+            }
         }
 
         &:nth-of-type(2) {
@@ -154,6 +189,13 @@ section {
             height: 150px;
             top: 60px;
             right: 108px;
+
+            @include lg {
+                width: 88px;
+                height: 88px;
+                top: 16px;
+                right: 16px;
+            }
         }
 
         &:nth-of-type(3) {
@@ -161,6 +203,18 @@ section {
             height: 208px;
             top: 270px;
             right: -120px;
+
+            @include lg {
+                width: 147px;
+                height: 88px;
+                right: -20px;
+                top: unset;
+                bottom: 46px;
+            }
+
+            @include sm {
+                right: -16px;
+            }
         }
 
         &:nth-of-type(4) {
@@ -168,6 +222,15 @@ section {
             height: 150px;
             top: 439px;
             right: 292px;
+
+            @include lg {
+                width: 54px;
+                height: 54px;
+                transform: translateX(50%);
+                right: 50%;
+                top: unset;
+                bottom: 10px;
+            }
         }
 
         &:nth-of-type(5) {
@@ -175,6 +238,14 @@ section {
             height: 151px;
             top: 328px;
             left: 136px;
+
+            @include lg {
+                width: 80px;
+                height: 80px;
+                left: 24px;
+                top: unset;
+                bottom: 44px;
+            }
         }
     }
 }
@@ -185,6 +256,10 @@ section {
     .container {
         display: flex;
         gap: 80px;
+
+        @include lg {
+            flex-direction: column;
+        }
     }
 
     &__title {
@@ -198,10 +273,20 @@ section {
 
     &__subtitle {
         margin: 12px 0 40px;
+
+        @include lg {
+            order: 3;
+            margin: 16px 0 0;
+        }
     }
 
     &__left-side {
         flex: 1;
+
+        @include lg {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__comment-wrapper {
@@ -210,6 +295,10 @@ section {
         border: 1px solid $blue;
         display: flex;
         gap: 16px;
+
+        @include lg {
+            order: 2;
+        }
 
         .photo {
             width: 100%;
@@ -238,6 +327,24 @@ section {
         max-width: 554px;
         margin-top: 60px;
         flex: 1;
+
+        @include lg {
+            margin: 24px auto;
+        }
+
+        &.desktop {
+            @include lg {
+                display: none;
+            }
+        }
+
+        &.mobile {
+            display: none;
+
+            @include lg {
+                display: block;
+            }
+        }
     }
 }
 
@@ -257,8 +364,17 @@ section {
         justify-content: space-between;
         margin-bottom: 40px;
 
+        @include lg {
+            flex-direction: column;
+            margin-bottom: 24px;
+        }
+
         h2 {
             margin: 0;
+
+            @include lg {
+                margin-bottom: 12px;
+            }
         }
 
         .subtitle {
@@ -270,6 +386,10 @@ section {
     &__accordion-wrapper {
         margin-top: 60px;
         overflow: hidden;
+
+        @include lg {            
+            margin-top: 24px;
+        }
     }
 
     &__list-wrapper {
@@ -478,11 +598,23 @@ section {
         border-bottom: 1px solid $black;
     }
 
+    h2 {
+        @include lg {
+            margin: 0;
+            text-align: left;
+        }
+    }
+
     .subtitle {
         margin: 12px auto 40px;
         width: 100%;
         max-width: 554px;
         text-align: center;
+
+        @include lg {
+            margin: 12px 0 16px;
+            text-align: left;
+        }
 
         @include sm {
             margin: 16px 0 24px;
@@ -692,20 +824,34 @@ section {
         }
     }
 
-    // &__right-part {
-
-    // }
-
     &__row {
         display: flex;
         margin-bottom: 38px;
 
+        @include lg {
+            margin-bottom: 0;
+            margin-top: 16px;
+            justify-content: space-between;
+
+            &:first-child {
+                margin-top: 24px;
+            }
+        }
+
         &:nth-of-type(1) {
             transform: translateX(-74px);
+
+            @include lg {
+                transform: translateX(0);
+            }
         }
 
         &:nth-of-type(2) {
             transform: translateX(-38px);
+
+            @include lg {
+                transform: translateX(0);
+            }
         }
 
         &:nth-of-type(3) {
@@ -734,6 +880,10 @@ section {
         display: flex;
         justify-content: space-between;
 
+        @include lg {
+            flex-direction: column;
+        }
+
         h2 {
             text-align: left;
             margin: 0;
@@ -741,6 +891,10 @@ section {
 
         p {
             max-width: 562px;
+
+            @include lg {
+                margin: 12px 0 24px;
+            }
         }
     }
 
@@ -880,8 +1034,16 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        @include sm {
-            flex-direction: column;
+
+        @include lg {
+            align-items: flex-start;
+        }
+    }
+
+    h2 {
+        @include lg {            
+            text-align: left;
+            margin: 0;
         }
     }
 
@@ -890,6 +1052,11 @@ section {
         width: 100%;
         max-width: 554px;
         text-align: center;
+
+        @include lg {            
+            text-align: left;
+            margin: 12px 0 0;
+        }
     }
 }
 
@@ -900,9 +1067,9 @@ section {
         justify-content: space-between;
 
         @include lg {
-            width: calc(100% - 32px);
-            padding: 60px 82px;
+            flex-direction: column;
         }
+
         @include md {
             padding: 44px 62px 52px;
         }
@@ -918,6 +1085,11 @@ section {
             margin: 0 0 40px;
             max-width: 418px;
             width: 100%;
+
+            @include lg {
+                max-width: unset;
+                margin: 0 0 24px;
+            }
         }
 
         &:before {
@@ -942,8 +1114,16 @@ section {
         gap: 12px;
         margin-bottom: 20px;
 
+        @include lg {
+            margin-bottom: 14px;
+        }
+
         &:last-child {
             margin-bottom: 0;
+
+            @include lg {
+                margin-bottom: 20px;
+            }
         }
     }
 
@@ -1012,6 +1192,10 @@ section {
         align-items: center;
         margin-bottom: 20px;
 
+        @include lg {
+            padding: 16px 16px 20px;
+        }
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -1019,6 +1203,10 @@ section {
         h3 {
             font-size: 20px;
             line-height: normal;
+
+            @include lg {
+                max-width: 200px;
+            }
         }
     }
 
@@ -1038,6 +1226,10 @@ section {
                 font-size: 14px;
                 line-height: 20px;
                 color: $main;
+
+                @include lg {
+                    white-space: nowrap;
+                }
             }
         }
     }
