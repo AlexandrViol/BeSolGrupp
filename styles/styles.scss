@@ -7,7 +7,7 @@ $white: #ffffff;
 $gray: #c2c3cc;
 $gray2: #747581;
 $error: red;
-$divider: #d7d7e1; 
+$divider: #d7d7e1;
 
 @import "./resetBrowserStyles";
 @import "./common";
@@ -24,6 +24,10 @@ section {
     &:first-of-type {
         margin-top: 85px;
         padding-top: 0;
+
+        @include sm {
+            margin-top: 56px;
+        }
     }
 
     @include lg {
@@ -37,10 +41,6 @@ section {
 }
 
 .header {
-    @include sm {
-        padding: 124px 0 32px;
-    }
-
     & .container {
         background-color: $black;
         background-image: url(../img/header_circle-bg.svg);
@@ -59,15 +59,19 @@ section {
             width: calc(100% - 40px);
             background-size: 100% 100%;
 
-
             align-items: center;
         }
 
         @include sm {
             flex-direction: column;
             justify-content: center;
-
             width: calc(100% - 32px);
+        }
+    }
+
+    h1 {
+        @include sm {
+            max-width: 320px;
         }
     }
 
@@ -78,9 +82,8 @@ section {
         text-align: center;
 
         @include sm {
-            font-size: 16px;
-            text-align: center;
-            margin: 12px 0 24px;
+            max-width: 320px;
+            margin: 16px 0 24px;
         }
     }
 
@@ -98,6 +101,10 @@ section {
             flex-direction: column;
             transform: translateY(-32px);
             max-width: 700px;
+        }
+
+        @include sm {
+            width: calc(100% - 56px);
         }
 
         .item {
@@ -253,6 +260,10 @@ section {
 .aboutUs {
     padding-top: 90px;
 
+    @include sm {
+        padding-top: 50px;
+    }
+
     .container {
         display: flex;
         gap: 80px;
@@ -300,6 +311,13 @@ section {
             order: 2;
         }
 
+        @include sm {
+            flex-direction: column;
+            align-items: center;
+            padding: 16px 16px 20px;
+            gap: 8px;
+        }
+
         .photo {
             width: 100%;
             max-width: 125px;
@@ -308,12 +326,22 @@ section {
 
         .comment {
             flex: 1;
+
+            @include sm {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+            }
         }
 
         .comment__text {
             color: $main;
             font-size: 14px;
             line-height: 20px;
+
+            @include sm {
+                margin-top: 16px;
+            }
         }
 
         h3 {
@@ -387,7 +415,7 @@ section {
         margin-top: 60px;
         overflow: hidden;
 
-        @include lg {            
+        @include lg {
             margin-top: 24px;
         }
     }
@@ -596,6 +624,12 @@ section {
 .programmingLanguages {
     .container {
         border-bottom: 1px solid $black;
+
+        @include sm {
+            width: calc(100% - 32px);
+            margin: 0 auto;
+            padding: 0;
+        }
     }
 
     h2 {
@@ -615,10 +649,6 @@ section {
             margin: 12px 0 16px;
             text-align: left;
         }
-
-        @include sm {
-            margin: 16px 0 24px;
-        }
     }
 
     img {
@@ -635,7 +665,7 @@ section {
         margin: 0 0 12px;
         text-align: left;
         @include sm {
-            margin: 0 0 20px;
+            margin: 0 0 24px;
         }
     }
 
@@ -649,6 +679,7 @@ section {
         position: absolute;
         top: 50px;
         right: 0;
+
         @include lg {
             display: none;
         }
@@ -667,8 +698,9 @@ section {
         flex-direction: column;
         justify-content: flex-end;
         background-size: 100%;
+
         @include sm {
-            padding: 20px;
+            width: calc(100% - 32px) !important;
         }
 
         &:hover {
@@ -702,9 +734,17 @@ section {
         background-color: $black;
         border-radius: 0 0 12px 12px;
 
+        @include sm {
+            padding: 12px 16px 16px;
+        }
+
         h3 {
             color: white;
             margin-bottom: 16px;
+
+            @include sm {
+                margin-bottom: 8px;
+            }
         }
     }
 
@@ -717,9 +757,8 @@ section {
         // -webkit-box-orient: vertical;
         // overflow: hidden;
         @include sm {
-            font-size: 16px;
-            line-height: 23px;
-            margin-bottom: 24px;
+            font-size: 14px;
+            line-height: 20px;
         }
 
         // & span {
@@ -738,22 +777,25 @@ section {
         display: flex;
         align-items: center;
         overflow: inherit;
+
         @include sm {
-            margin-top: 20px;
+            margin-top: 24px;
         }
     }
 
     &__swiper-wrapper {
         height: 400px;
-        @include sm {
-            height: auto;
-        }
     }
 
     &__link-arrow {
         position: absolute;
         top: 24px;
         right: 24px;
+
+        @include sm {
+            top: 16px;
+            right: 16px;
+        }
 
         & svg circle {
             transition: $transition;
@@ -1041,7 +1083,7 @@ section {
     }
 
     h2 {
-        @include lg {            
+        @include lg {
             text-align: left;
             margin: 0;
         }
@@ -1053,7 +1095,7 @@ section {
         max-width: 554px;
         text-align: center;
 
-        @include lg {            
+        @include lg {
             text-align: left;
             margin: 12px 0 0;
         }
