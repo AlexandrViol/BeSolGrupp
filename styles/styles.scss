@@ -977,9 +977,11 @@ section {
         position: absolute;
         justify-content: space-between;
         top: 50%;
+        transform: translateY(-50%);
         width: 100%;
         right: 0;
         left: 0;
+        z-index: 2;
 
         @include lg {
             display: none;
