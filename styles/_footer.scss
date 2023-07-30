@@ -2,10 +2,7 @@
     margin-top: 140px;
 
     @include lg {
-        margin: 130px 16px 40px;
-    }
-    @include sm {
-        margin: 56px 16px 40px;
+        margin: 80px 0 0;
     }
 
     .container {
@@ -17,7 +14,7 @@
         @include lg {
             flex-direction: column;
             align-items: center;
-            padding: 32px;
+            padding: 16px;
         }
     }
 
@@ -35,6 +32,10 @@
             flex-direction: column;
             align-items: center;
             margin-bottom: 12px;
+            height: auto;
+            margin-right: 0;
+            width: 100%;
+            max-width: 320px;
         }
 
         @include sm {
@@ -49,7 +50,11 @@
         line-height: normal;
 
         @include lg {
-            margin: 0 0 8px;
+            margin: 0 0 16px;
+        }
+
+        @include sm {
+            font-size: 20px;
         }
     }
 
@@ -63,14 +68,21 @@
         height: 68px;
 
         @include lg {
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: flex-start;
             width: 100%;
-            max-width: 720px;
-            gap: 10px;
+            max-width: 320px;
+            gap: 8px;
+            padding-right: 0;
+            margin-right: 0;
+            border-right: unset;
+            border-bottom: 1px solid $blue;
+            height: auto;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
         }
 
         @include sm {
-            flex-direction: column;
         }
     }
 
@@ -79,7 +91,11 @@
         gap: 6px;
 
         svg {
-            transform: translateY(3px);
+            transform: translateY(2px);
+
+            @include lg {
+                transform: unset;
+            }
         }
 
         p {
@@ -87,6 +103,10 @@
             font-size: 14px;
             line-height: 20px;
             max-width: 168px;
+
+            @include lg {
+                max-width: unset;
+            }
         }
     }
 
@@ -97,14 +117,11 @@
         margin-bottom: 8px;
 
         &:last-child {
-          margin-bottom: 0;
+            margin-bottom: 0;
         }
 
-        @include sm {
-            margin-bottom: 12px;
-            &:last-child {
-                margin-bottom: 0;
-            }
+        @include lg {
+            margin-bottom: 8px;
         }
 
         & svg {
@@ -133,14 +150,29 @@
         }
 
         &.terms {
-          margin-bottom: 12px;
+            margin-bottom: 12px;
+
+            @include lg {
+                margin-bottom: 0;
+            }
         }
     }
 
     &__privacy-section {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        @include lg {
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 320px;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid $blue;
+        }
     }
 
     &__policy {
@@ -149,5 +181,23 @@
         line-height: 20px;
         white-space: nowrap;
         margin-top: 8px;
+
+        @include lg {
+            display: none;
+        }
+
+        &--mobile {
+            display: none;
+            width: 100%;
+            max-width: 280px;
+            text-align: center;
+            color: $gray2;
+            font-size: 14px;
+            line-height: 20px;
+
+            @include lg {
+                display: block;
+            }
+        }
     }
 }

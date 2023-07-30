@@ -1105,8 +1105,9 @@
                 </p>
                 <picture>
                     <source
-                        media="(max-width:650px)"
-                        srcset=""
+                        media="(max-width:768px)"
+                        srcset="img/team-mobile_img.png"
+                        alt="img"
                     />
                     <img
                         src="img/team_img.png"
@@ -1194,7 +1195,7 @@
                             required
                             onkeyup="checkParams()"
                         ></textarea>
-                        <label for="form__text">Message</label>
+                        <label for="form__text">About project</label>
                     </div>
                     <button
                         class="feedback__button button--yellow"
@@ -1366,13 +1367,14 @@
                         <p>Privacy policy</p>
                     </a>
                 </div>
+                <p class="footer__policy--mobile">
+                    Copyright © 2023 BeSol Grupp OÜ. All rights reserved.
+                </p>
             </div>
         </footer>
 
         <div class="modal modal1">
             <div class="modal__content-wrapper">
-                <!-- <div class="modal__text"></div> -->
-                <!-- <img class="modal__image" /> -->
                 <div class="modal__scroll">
                     <h2>Fragmented nature of healthcare data</h2>
                     <picture class="photo">
@@ -1540,8 +1542,6 @@
 
         <div class="modal modal2">
             <div class="modal__content-wrapper">
-                <!-- <div class="modal__text"></div> -->
-                <!-- <img class="modal__image" /> -->
                 <div class="modal__scroll">
                     <h2>Analysis of virtual machines</h2>
                     <picture class="photo">
@@ -1653,8 +1653,6 @@
 
         <div class="modal modal3">
             <div class="modal__content-wrapper">
-                <!-- <div class="modal__text"></div> -->
-                <!-- <img class="modal__image" /> -->
                 <div class="modal__scroll">
                     <h2>Migration from AWS to Azure</h2>
                     <picture class="photo">
@@ -1737,8 +1735,6 @@
 
         <div class="modal modal4">
             <div class="modal__content-wrapper">
-                <!-- <div class="modal__text"></div> -->
-                <!-- <img class="modal__image" /> -->
                 <div class="modal__scroll">
                     <h2>Electricity Auctions</h2>
                     <picture class="photo">
@@ -1839,8 +1835,6 @@
 
         <div class="modal modal5">
             <div class="modal__content-wrapper">
-                <!-- <div class="modal__text"></div> -->
-                <!-- <img class="modal__image" /> -->
                 <div class="modal__scroll">
                     <h2>Senior Front-End Developer</h2>
                     <div class="items-wrapper vacancy">
@@ -1983,8 +1977,6 @@
 
         <div class="modal modal6">
             <div class="modal__content-wrapper">
-                <!-- <div class="modal__text"></div> -->
-                <!-- <img class="modal__image" /> -->
                 <div class="modal__scroll">
                     <h2>Junior Front-End Developer</h2>
                     <div class="items-wrapper vacancy">
@@ -2206,19 +2198,20 @@
             const reviews__swiper = new Swiper(".reviews__swiper", {
                 speed: 400,
                 spaceBetween: 12,
-                // width: 666,
-                // freeMode: true,
+                freeMode: true,
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
                 slidesPerView: 1,
-                initialSlide: 1,
+                initialSlide: 0,
                 direction: "horizontal",
                 breakpoints: {
                     1280: {
                         slidesPerView: 1,
                         spaceBetween: 40,
+                        initialSlide: 1,
+                        freeMode: false,
                     },
                 },
             });
@@ -2232,21 +2225,15 @@
                 },
                 direction: "horizontal",
                 slidesPerView: 1,
-
+                freeMode: true,
                 breakpoints: {
                     1280: {
                         slidesPerView: 2,
                         spaceBetween: 20,
+                        freeMode: false,
                     },
                 },
             });
-
-            // const services__swiper = new Swiper(".services__swiper", {
-            //     speed: 400,
-            //     spaceBetween: 12,
-            //     direction: "horizontal",
-            //     slidesPerView: "auto",
-            // });
         </script>
 
         <script>
@@ -2268,6 +2255,7 @@
                 });
             }
         </script>
+
         <script>
             function checkParams() {
                 if (

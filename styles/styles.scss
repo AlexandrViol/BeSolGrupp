@@ -18,6 +18,7 @@ $divider: #d7d7e1;
 @import "./swiper-bundle.css";
 
 section {
+    overflow: hidden;
     margin-top: 25px;
     padding-top: 125px;
 
@@ -442,7 +443,6 @@ section {
         padding-right: 12px;
         display: flex;
         position: relative;
-
         transition: width 0.9s ease-in-out;
 
         &:last-child {
@@ -659,8 +659,6 @@ section {
 }
 
 .caseStudies {
-    overflow: hidden;
-
     &__title {
         margin: 0 0 12px;
         text-align: left;
@@ -686,25 +684,27 @@ section {
     }
 
     &__swiper-slide {
-        // padding-top: 228px;
         border-radius: 12px;
         border: 1px solid $black;
         width: 100%;
-        // max-width: 590px;
         transition: background-size 0.6s ease-in-out;
         cursor: pointer;
-        // background-color: $white;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         background-size: 100%;
 
         @include sm {
+            background-size: 110%;
             width: calc(100% - 32px) !important;
         }
 
         &:hover {
             background-size: 104%;
+
+            @include sm {
+                background-size: 110%;
+            }
 
             .caseStudies__link-arrow svg circle {
                 fill: $darkBlue;
@@ -750,26 +750,11 @@ section {
 
     &__slide-text {
         color: white;
-        // pointer-events: none;
 
-        // -webkit-line-clamp: 4;
-        // display: -webkit-box;
-        // -webkit-box-orient: vertical;
-        // overflow: hidden;
         @include sm {
             font-size: 14px;
             line-height: 20px;
         }
-
-        // & span {
-        //     font-family: "RubikSemibold", sans-serif;
-        //     color: $main;
-        //     position: absolute;
-        //     bottom: -4px;
-        //     right: 0;
-        //     background-color: white;
-        //     padding: 4px;
-        // }
     }
 
     &__swiper {
@@ -866,6 +851,14 @@ section {
         }
     }
 
+    &__right-part {
+        @include sm {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+    }
+
     &__row {
         display: flex;
         margin-bottom: 38px;
@@ -877,7 +870,17 @@ section {
 
             &:first-child {
                 margin-top: 24px;
+
+                @include sm {
+                    margin-top: 0;
+                }
             }
+        }
+
+        @include sm {
+            flex-direction: column;
+            width: 50%;
+            margin: 0;
         }
 
         &:nth-of-type(1) {
@@ -894,10 +897,31 @@ section {
             @include lg {
                 transform: translateX(0);
             }
+
+            @include sm {
+                & > div {
+                    border-right: 1px solid $main !important;
+                }
+            }
         }
 
         &:nth-of-type(3) {
             margin-bottom: 0;
+
+            @include sm {
+                flex-direction: row;
+                width: 100%;
+                flex-wrap: wrap;
+
+                & > div {
+                    width: 50%;
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        border-right: 1px solid $main;
+                    }
+                }
+            }
         }
 
         & > div {
@@ -908,16 +932,24 @@ section {
             justify-content: center;
             align-items: center;
 
+            @include sm {
+                width: 100%;
+                padding: 12px;
+                margin-bottom: 16px;
+            }
+
             &:last-child {
                 border-right: 1px solid $main;
+
+                @include sm {
+                    border-right: 1px solid transparent;
+                }
             }
         }
     }
 }
 
 .reviews {
-    overflow: hidden;
-
     &__title-wrapper {
         display: flex;
         justify-content: space-between;
@@ -965,7 +997,8 @@ section {
         transition: $transition;
 
         @include sm {
-            padding: 20px;
+            padding: 16px 16px 20px;
+            width: calc(100% - 32px) !important;
         }
 
         &.swiper-slide-active {
@@ -992,6 +1025,11 @@ section {
         gap: 16px;
         margin-bottom: 12px;
 
+        @include sm {
+            flex-direction: column;
+            gap: 8px;
+        }
+
         img {
             width: 52px;
             height: 52px;
@@ -999,6 +1037,18 @@ section {
 
         p {
             color: $gray2;
+
+            @include sm {
+                text-align: center;
+                font-size: 14px;
+                line-height: 20px;
+                margin-top: 4px;
+            }
+        }
+
+        & + p {
+            font-size: 14px;
+            line-height: 20px;
         }
     }
 
@@ -1010,7 +1060,7 @@ section {
         margin: 40px auto 0;
 
         @include sm {
-            margin-top: 20px;
+            margin-top: 0;
         }
     }
 
@@ -1100,6 +1150,13 @@ section {
             margin: 12px 0 0;
         }
     }
+
+    picture {
+        @include sm {
+            margin: 0 auto;
+            max-width: 400px;
+        }
+    }
 }
 
 .feedback {
@@ -1112,16 +1169,17 @@ section {
             flex-direction: column;
         }
 
-        @include md {
-            padding: 44px 62px 52px;
-        }
         @include sm {
             flex-direction: column;
-            padding: 44px 24px 52px;
         }
     }
 
     &__left-part {
+        @include sm {
+            max-width: none;
+            margin-top: 0;
+        }
+
         h2 {
             text-align: left;
             margin: 0 0 40px;
@@ -1135,18 +1193,23 @@ section {
         }
 
         &:before {
-            content: url(../img/feedback_star.svg);
+            content: "";
             position: absolute;
             bottom: 0;
             right: 20px;
             width: 76px;
             height: 76px;
             transform: translate(100%, 50%);
-        }
+            background-image: url(../img/feedback_star.svg);
+            background-size: contain;
 
-        @include sm {
-            max-width: none;
-            margin-top: 0;
+            @include sm {
+                bottom: 12px;
+                right: 24px;
+                width: 28px;
+                height: 28px;
+                transform: unset;
+            }
         }
     }
 
@@ -1183,16 +1246,26 @@ section {
             right: 8px;
             width: 150px;
             height: 150px;
+
+            @include sm {
+                content: "";
+            }
         }
 
         @include sm {
             max-width: none;
+            padding: 16px 16px 20px;
         }
 
         h3 {
             font-size: 20px;
             line-height: normal;
             margin-bottom: 18px;
+
+            @include sm {
+                font-size: 16px;
+                margin-bottom: 24px;
+            }
         }
     }
 
@@ -1211,7 +1284,7 @@ section {
         @extend button;
         margin-top: 74px;
         @include sm {
-            margin-top: 12px;
+            margin-top: 56px;
         }
         @media (max-width: 440px) {
             width: 100%;
@@ -1223,6 +1296,10 @@ section {
     h2 {
         text-align: left;
         margin: 0 0 40px;
+
+        @include sm {
+            margin: 0 0 24px;
+        }
     }
 
     &__position-wrapper {
@@ -1238,6 +1315,11 @@ section {
             padding: 16px 16px 20px;
         }
 
+        @include sm {
+            margin-bottom: 16px;
+            flex-direction: column;
+        }
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -1249,12 +1331,25 @@ section {
             @include lg {
                 max-width: 200px;
             }
+
+            @include sm {
+                font-size: 16px;
+                max-width: unset;
+                text-align: center;
+                margin-bottom: 16px;
+            }
         }
     }
 
     &__details-wrapper {
         display: flex;
         gap: 12px;
+
+        @include sm {
+            margin-bottom: 20px;
+            gap: 8px;
+            justify-content: center;
+        }
 
         & > div {
             display: flex;
@@ -1278,6 +1373,12 @@ section {
 
     button {
         width: 156px;
+
+        @include sm {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
     }
 }
 

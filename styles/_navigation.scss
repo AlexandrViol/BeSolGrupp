@@ -48,10 +48,6 @@
     display: flex;
     gap: 40px;
 
-    // @include lg {
-    //   margin-right: 40px;
-    // }
-
     @include lg {
       flex-direction: column;
       margin-right: 0;
@@ -99,9 +95,6 @@
     transition: $transition;
     color: $black;
 
-    // @include lg {
-    //   margin-right: 20px;
-    // }
     @include lg {
       margin-right: 0;
       padding: 16px 0;
