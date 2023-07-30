@@ -613,6 +613,7 @@ button:disabled, .feedback__button:disabled {
     margin-right: 0;
     width: 100%;
     max-width: 320px;
+    padding-right: 0;
   }
 }
 @media (max-width: 768px) {
