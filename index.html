@@ -2237,8 +2237,19 @@
         </script>
 
         <script>
+            document
+                .querySelector(".navigation__button")
+                .addEventListener("click", () => {
+                    if (document.getElementById("navigation__toggle").checked) {
+                        document.querySelector("html").style.overflow =
+                            "auto";
+                    } else {
+                        document.querySelector("html").style.overflow = "hidden";
+                    }
+                });
             function closeNavigation() {
                 document.getElementById("navigation__toggle").checked = false;
+                document.querySelector("html").style.overflow = "auto";
             }
         </script>
 
