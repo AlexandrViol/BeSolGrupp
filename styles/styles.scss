@@ -421,14 +421,28 @@ section {
         }
     }
 
+    &__icon {
+        @include lg {
+            transform: rotate(90deg);
+        }
+    }
+
     &__list-wrapper {
         height: 488px;
+
+        @include lg {
+            height: auto;
+        }
     }
 
     &__list {
         height: 100%;
         flex-wrap: nowrap;
         display: flex;
+
+        @include lg {
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -445,12 +459,32 @@ section {
         position: relative;
         transition: width 0.9s ease-in-out;
 
+        @include lg {
+            width: 100%;
+            border-left: unset;
+            border-top: 1px solid $black;
+            padding: 16px 12px;
+            flex-direction: column-reverse;
+            padding-bottom: 0;
+        }
+
         &:last-child {
             border-right: 1px solid $black;
+
+            @include lg {
+                border-right: unset;
+                border-bottom: 1px solid $black;
+            }
         }
 
         &.active {
             width: 80% !important;
+
+            @include lg {
+                width: 100% !important;
+                height: 420px;
+                padding-bottom: 16px;
+            }
 
             .expertise__img {
                 opacity: 1;
@@ -543,6 +577,10 @@ section {
         flex-direction: column;
         align-items: center;
         display: block;
+
+        @include lg {
+            flex-direction: row;
+        }
     }
 
     &__gradient-wrapper {
@@ -572,6 +610,12 @@ section {
         padding: 20px 24px;
         color: white;
         border-radius: 0 0 4px 4px;
+
+        @include lg {
+            font-size: 14px;
+            line-height: 20px;
+            padding: 16px;
+        }
     }
 
     &__details-flex {
@@ -580,6 +624,10 @@ section {
         align-items: center;
         display: flex;
         position: relative;
+
+        @include lg {
+            justify-content: flex-start;
+        }
     }
 
     &__title {
@@ -590,6 +638,11 @@ section {
         font-size: 20px;
         line-height: normal;
         transition: opacity 0.4s ease-in-out;
+
+        @include lg {
+            opacity: 1;
+            font-size: 16px;
+        }
     }
 
     &__vertical-title-wrapper {
@@ -603,6 +656,10 @@ section {
         left: auto;
         right: auto;
         transform: rotate(-90deg);
+
+        @include lg {
+            display: none;
+        }
     }
 
     &__vertical-title {
@@ -613,6 +670,10 @@ section {
         font-size: 20px;
         line-height: normal;
         transition: opacity 0.4s ease-in-out;
+
+        @include lg {
+            display: none;
+        }
     }
 
     &__icon {

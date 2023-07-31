@@ -1,174 +1,174 @@
 .navigation {
-  position: fixed;
-  background-color: $white;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  width: 100%;
-  border-bottom: 1px solid $blue;
+    position: fixed;
+    background-color: $white;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    border-bottom: 1px solid $blue;
 
-  .container {
-    @include lg {
-      position: initial;
-    }
-  }
-
-  &__content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 0;
-
-    @include lg {
-      position: initial;
+    .container {
+        @include lg {
+            position: initial;
+        }
     }
 
-    @include sm {
-      padding: 14px 0;
-    }
-  }
-
-  &__links-wrapper {
-    display: flex;
-    align-items: center;
-
-    @include lg {
-      width: 100vw;
-      height: calc(100vh - 74px);
-      display: none;
-      position: absolute;
-      top: 74px;
-      left: 0;
-      right: 0;
-      background-color: $white;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 24px;
-      justify-content: space-between;
-      bottom: 0;
-    }
-
-    @include sm {
-      top: 55px;
-      padding: 24px 16px;
-    }
-  }
-
-  &__left-section {
-    display: flex;
-    gap: 40px;
-
-    @include lg {      
-      flex-direction: column;
-      margin-right: 0;
-      width: 100%;
-      gap: 0;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-  }
-
-  &__logo {
-    font-family: 'IBMPlexMonoRSemiBold', sans-serif;
-    font-size: 32px;
-    line-height: normal;
-    color: $black;
-    white-space: nowrap;
-
-    @include sm {
-      font-size: 20px;
-    }
-  }
-
-  &__right-section {
-    @include md {
-      padding-bottom: 32px;
-    }
-
-    & button {
-      margin-left: 48px;
-      border: 1px solid $main;
-      background-color: $white;
-      color: $main;
-
-      &:hover {
-        background-color: $main;
-        color: $white;
-      }
-
-      @include lg {
-        display: none;
-      }
-    }
-  }
-
-  &__link {
-    font-size: 16px;
-    line-height: normal;
-    transition: $transition;
-    color: $black;
-
-    @include lg {
-      margin-right: 0;
-      padding: 26px 0;
-      border-bottom: 1px solid $black;
-      width: calc(100% - 40px);
-      margin-left: 20px;
-
-      &:first-child {
-        border-top: 1px solid $black;
-      }
-    }
-
-    @include sm {
-      margin-left: 0;
-      width: 100%;
-    }
-
-    &:hover {
-      color: $main;
-    }
-  }
-
-  &__line {
-    width: 20px;
-    height: 1px;
-    background-color: $black;
-    margin-bottom: 6px;
-    display: block;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &__toggle {
-    display: none;
-
-    &:checked + label {
-      &>.navigation__line:nth-child(1) {
-        transform: rotate(45deg);
-        margin-bottom: -1px;
-      }
-      &>.navigation__line:nth-child(2) {
-        display: none;
-      }
-      &>.navigation__line:nth-child(3) {
-        transform: rotate(-45deg);
-      }
-      & + .navigation__links-wrapper {
+    &__content-wrapper {
         display: flex;
-      }
-    }
-  }
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
 
-  &__button {
-    display: none;
-    cursor: pointer;
+        @include lg {
+            position: initial;
+        }
 
-    @include lg {
-      display: block;
+        @include sm {
+            padding: 14px 0;
+        }
     }
-  }
+
+    &__links-wrapper {
+        display: flex;
+        align-items: center;
+
+        @include lg {
+            width: 100vw;
+            height: calc(100vh - 74px);
+            display: none;
+            position: absolute;
+            top: 74px;
+            left: 0;
+            right: 0;
+            background-color: $white;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 24px;
+            justify-content: space-between;
+            bottom: 0;
+        }
+
+        @include sm {
+            top: 55px;
+            padding: 24px 16px;
+        }
+    }
+
+    &__left-section {
+        display: flex;
+        gap: 40px;
+
+        @include lg {
+            flex-direction: column;
+            margin-right: 0;
+            width: 100%;
+            gap: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    }
+
+    &__logo {
+        font-family: "IBMPlexMonoRSemiBold", sans-serif;
+        font-size: 32px;
+        line-height: normal;
+        color: $black;
+        white-space: nowrap;
+
+        @include sm {
+            font-size: 20px;
+        }
+    }
+
+    &__right-section {
+        @include md {
+            padding-bottom: 32px;
+        }
+
+        & button {
+            margin-left: 48px;
+            border: 1px solid $main;
+            background-color: $white;
+            color: $main;
+
+            &:hover {
+                background-color: $main;
+                color: $white;
+            }
+
+            @include lg {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: normal;
+        transition: $transition;
+        color: $black;
+
+        @include lg {
+            margin-right: 0;
+            padding: 26px 0;
+            border-bottom: 1px solid $black;
+            width: calc(100% - 40px);
+            margin-left: 20px;
+
+            &:first-child {
+                border-top: 1px solid $black;
+            }
+        }
+
+        @include sm {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        &:hover {
+            color: $main;
+        }
+    }
+
+    &__line {
+        width: 20px;
+        height: 1px;
+        background-color: $black;
+        margin-bottom: 6px;
+        display: block;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__toggle {
+        display: none;
+
+        &:checked + label {
+            & > .navigation__line:nth-child(1) {
+                transform: rotate(45deg);
+                margin-bottom: -1px;
+            }
+            & > .navigation__line:nth-child(2) {
+                display: none;
+            }
+            & > .navigation__line:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+            & + .navigation__links-wrapper {
+                display: flex;
+            }
+        }
+    }
+
+    &__button {
+        display: none;
+        cursor: pointer;
+
+        @include lg {
+            display: block;
+        }
+    }
 }
