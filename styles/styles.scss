@@ -517,42 +517,89 @@ section {
 
         &:nth-child(1) {
             .expertise__img {
-                background-image: url(../img/exp1_back-img.png);
+                @media (min-width: 769px) {
+                    background-image: url(../img/exp1_back-img.png);
+                }
+
+                @include sm {
+                    background-image: url(../img/exp1_back_mobile-img.png);
+                }
             }
         }
         &:nth-child(2) {
             .expertise__img {
-                background-image: url(../img/exp2_back-img.png);
+                @media (min-width: 769px) {
+                    background-image: url(../img/exp2_back-img.png);
+                }
+
+                @include sm {
+                    background-image: url(../img/exp2_back_mobile-img.png);
+                }
             }
         }
         &:nth-child(3) {
             .expertise__img {
-                background-image: url(../img/exp3_back-img.png);
+                @media (min-width: 769px) {
+                    background-image: url(../img/exp3_back-img.png);
+                }
+
+                @include sm {
+                    background-image: url(../img/exp3_back_mobile-img.png);
+                }
             }
         }
         &:nth-child(4) {
             .expertise__img {
-                background-image: url(../img/exp4_back-img.png);
+                @media (min-width: 769px) {
+                    background-image: url(../img/exp4_back-img.png);
+                }
+
+                @include sm {
+                    background-image: url(../img/exp4_back_mobile-img.png);
+                }
             }
         }
         &:nth-child(5) {
             .expertise__img {
-                background-image: url(../img/exp5_back-img.png);
+                @media (min-width: 769px) {
+                    background-image: url(../img/exp5_back-img.png);
+                }
+
+                @include sm {
+                    background-image: url(../img/exp5_back_mobile-img.png);
+                }
             }
         }
         &:nth-child(6) {
             .expertise__img {
-                background-image: url(../img/exp6_back-img.png);
+                @media (min-width: 769px) {
+                    background-image: url(../img/exp6_back-img.png);
+                }
+
+                @include sm {
+                    background-image: url(../img/exp6_back_mobile-img.png);
+                }
             }
         }
         &:nth-child(7) {
             .expertise__img {
-                background-image: url(../img/exp7_back-img.png);
+                @media (min-width: 769px) {
+                    background-image: url(../img/exp7_back-img.png);
+                }
+                @include sm {
+                    background-image: url(../img/exp7_back_mobile-img.png);
+                }
             }
         }
         &:nth-child(8) {
             .expertise__img {
-                background-image: url(../img/exp8_back-img.png);
+                @media (min-width: 769px) {
+                    background-image: url(../img/exp8_back-img.png);
+                }
+
+                @include lg {
+                    background-image: url(../img/exp8_back_mobile-img.png);
+                }
             }
         }
     }
