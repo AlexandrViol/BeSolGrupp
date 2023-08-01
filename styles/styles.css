@@ -980,10 +980,14 @@ section:first-of-type {
 .header__items-wrapper .item:last-child:before {
   content: url(../img/header_item-3.svg);
 }
-.header__items-wrapper .item h3 {
+.header__items-wrapper .item__title {
+  font-family: "IBMPlexMonoRSemiBold", sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  color: #1c1c23;
   margin-bottom: 10px;
 }
-.header__items-wrapper .item p {
+.header__items-wrapper .item__subtitle {
   color: #747581;
   font-size: 14px;
   line-height: 20px;
