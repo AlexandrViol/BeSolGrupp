@@ -61,13 +61,6 @@
                             <a
                                 onClick="closeNavigation()"
                                 class="navigation__link"
-                                href="#clients"
-                            >
-                                Clients
-                            </a>
-                            <a
-                                onClick="closeNavigation()"
-                                class="navigation__link"
                                 href="#reviews"
                             >
                                 Reviews
@@ -222,10 +215,10 @@
                                 enterprise solutions catering to logistics,
                                 banking, healthcare, automotive, manufacturing,
                                 and other industries. We are proud to work with
-                                such renowned companies as Carl Zeiss, GEA, and
-                                Lufthansa to help them meet the growing demand
-                                for digital transformation and stay competitive
-                                and innovative in their industries.”
+                                renowned big companies to help them meet the
+                                growing demand for digital transformation and
+                                stay competitive and innovative in their
+                                industries.”
                             </p>
                             <h3>Oleg Besman, CEO</h3>
                         </div>
@@ -757,7 +750,7 @@
                             class="swiper-slide caseStudies__swiper-slide modal3__open"
                         >
                             <div class="caseStudies__swiper-text-wrapper">
-                                <h3>Fragmented nature of healthcare data</h3>
+                                <h3>Migration from AWS to Azure</h3>
                                 <p class="caseStudies__slide-text">
                                     A client requested a solution migration from
                                     AWS to Azure. This involved transferring
@@ -840,85 +833,6 @@
                                     />
                                 </svg>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section
-            class="clients"
-            id="clients"
-        >
-            <div class="container">
-                <div class="clients__left-part">
-                    <h2>Clients</h2>
-                    <p class="subtitle">
-                        We help our clients successfully achieve their strategic
-                        goals and overcome their toughest technological
-                        challenges. Our services deliver impactful, long-term
-                        results with unbeatable value.
-                    </p>
-                </div>
-                <div class="clients__right-part">
-                    <div class="clients__row">
-                        <div>
-                            <img
-                                src="img/Tesla_logo.svg"
-                                alt="Tesla"
-                            />
-                        </div>
-                        <div>
-                            <img
-                                src="img/Google_logo.svg"
-                                alt="Google"
-                            />
-                        </div>
-                        <div>
-                            <img
-                                src="img/Fedex_logo.svg"
-                                alt="Fedex"
-                            />
-                        </div>
-                    </div>
-                    <div class="clients__row">
-                        <div>
-                            <img
-                                src="img/Accenture_logo.svg"
-                                alt="Accenture"
-                            />
-                        </div>
-                        <div>
-                            <img
-                                src="img/Honda_logo.svg"
-                                alt="Honda"
-                            />
-                        </div>
-                        <div>
-                            <img
-                                src="img/TikTok_logo.svg"
-                                alt="TikTok"
-                            />
-                        </div>
-                    </div>
-                    <div class="clients__row">
-                        <div>
-                            <img
-                                src="img/NTT_logo.svg"
-                                alt="NTT"
-                            />
-                        </div>
-                        <div>
-                            <img
-                                src="img/Verizon_logo.svg"
-                                alt="Verizon"
-                            />
-                        </div>
-                        <div>
-                            <img
-                                src="img/Intel_logo.svg"
-                                alt="Intel"
-                            />
                         </div>
                     </div>
                 </div>
@@ -2241,10 +2155,10 @@
                 .querySelector(".navigation__button")
                 .addEventListener("click", () => {
                     if (document.getElementById("navigation__toggle").checked) {
-                        document.querySelector("html").style.overflow =
-                            "auto";
+                        document.querySelector("html").style.overflow = "auto";
                     } else {
-                        document.querySelector("html").style.overflow = "hidden";
+                        document.querySelector("html").style.overflow =
+                            "hidden";
                     }
                 });
             function closeNavigation() {
