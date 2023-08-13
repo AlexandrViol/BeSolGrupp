@@ -197,8 +197,7 @@ li:before {
   background: #0013ff;
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 8px;
   border-radius: 50%;
 }
 
@@ -303,19 +302,30 @@ button:disabled, .feedback__button:disabled {
     padding: 16px;
   }
 }
+.modal .margin-bottom-12 {
+  margin-bottom: 12px;
+}
+.modal .margin-bottom-40 {
+  margin-bottom: 40px;
+}
+@media (max-width: 1280px) {
+  .modal .margin-bottom-40 {
+    margin-bottom: 24px;
+  }
+}
 .modal__content-wrapper {
   margin: auto;
   transform: translateY(-50%);
   top: 50%;
   max-width: 1200px;
   background-color: white;
-  max-height: calc(100% - 60px);
+  max-height: calc(100svh - 60px);
   display: flex;
   border-radius: 12px;
 }
 @media (max-width: 1280px) {
   .modal__content-wrapper {
-    max-height: 90vh;
+    max-height: 90svh;
     transform: translateY(-47%);
   }
 }
@@ -353,7 +363,7 @@ button:disabled, .feedback__button:disabled {
 }
 @media (max-width: 1280px) {
   .modal__content-wrapper picture img {
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
   }
 }
 .modal__content-wrapper .blue-block {
@@ -382,7 +392,7 @@ button:disabled, .feedback__button:disabled {
   }
 }
 .modal__content-wrapper .items-wrapper .item {
-  width: calc(50% - 20px);
+  width: calc(33.3% - 26.6px);
 }
 @media (max-width: 1280px) {
   .modal__content-wrapper .items-wrapper .item {
@@ -401,6 +411,17 @@ button:disabled, .feedback__button:disabled {
 .modal__content-wrapper .items-wrapper.simple {
   gap: 10px;
 }
+.modal__content-wrapper .items-wrapper.two-column .item {
+  width: calc(50% - 20px);
+}
+@media (max-width: 768px) {
+  .modal__content-wrapper .items-wrapper.two-column {
+    flex-direction: column;
+  }
+  .modal__content-wrapper .items-wrapper.two-column .item {
+    width: 100%;
+  }
+}
 .modal__content-wrapper .items-wrapper.vacancy {
   gap: 12px;
 }
@@ -417,6 +438,9 @@ button:disabled, .feedback__button:disabled {
   line-height: 20px;
   color: #0013ff;
   margin-bottom: 0;
+}
+.modal__content-wrapper.modal5 p, .modal__content-wrapper.modal6 p {
+  margin-bottom: 12px;
 }
 .modal__content-wrapper,
 .modal #caption {
@@ -2074,6 +2098,9 @@ section:first-of-type {
     flex-direction: column;
   }
 }
+.openPositions__position-wrapper:first-of-type .openPositions__details-wrapper {
+  transform: translateX(12px);
+}
 .openPositions__position-wrapper:last-child {
   margin-bottom: 0;
 }
@@ -2104,6 +2131,9 @@ section:first-of-type {
     gap: 8px;
     justify-content: center;
   }
+}
+.openPositions__details-wrapper.transform {
+  transform: translateX(-10px);
 }
 .openPositions__details-wrapper > div {
   display: flex;

@@ -29,8 +29,7 @@ li {
         background: $main;
         position: absolute;
         left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 8px;
         border-radius: 50%;
     }
 }
@@ -80,7 +79,7 @@ button {
             width: 0;
             height: 0;
         }
-        &:focus {        
+        &:focus {
             outline: none;
         }
 
@@ -133,18 +132,30 @@ button {
         padding: 16px;
     }
 
+    .margin-bottom-12 {
+        margin-bottom: 12px;
+    }
+
+    .margin-bottom-40 {
+        margin-bottom: 40px;
+
+        @include lg {
+            margin-bottom: 24px;
+        }
+    }
+
     &__content-wrapper {
         margin: auto;
         transform: translateY(-50%);
         top: 50%;
         max-width: 1200px;
         background-color: white;
-        max-height: calc(100% - 60px);
+        max-height: calc(100svh - 60px);
         display: flex;
         border-radius: 12px;
 
         @include lg {
-            max-height: 90vh;
+            max-height: 90svh;
             transform: translateY(-47%);
         }
 
@@ -181,7 +192,7 @@ button {
                 margin-bottom: 40px;
 
                 @include lg {
-                    margin-bottom: 20px;
+                    margin: 0 auto 20px;
                 }
             }
         }
@@ -211,7 +222,7 @@ button {
             }
 
             .item {
-                width: calc(50% - 20px);
+                width: calc(33.3% - 26.6px);
 
                 @include lg {
                     width: calc(50% - 8px);
@@ -231,9 +242,23 @@ button {
                 gap: 10px;
             }
 
+            &.two-column {
+                .item {
+                    width: calc(50% - 20px);
+                }
+
+                @include sm {
+                    flex-direction: column;
+
+                    .item {
+                        width: 100%;
+                    }
+                }
+            }
+
             &.vacancy {
-              gap: 12px;
-              
+                gap: 12px;
+
                 & > div {
                     display: flex;
                     align-items: center;
@@ -249,6 +274,13 @@ button {
                         margin-bottom: 0;
                     }
                 }
+            }
+        }
+
+        &.modal5,
+        &.modal6 {
+            p {
+                margin-bottom: 12px;
             }
         }
     }

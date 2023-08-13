@@ -1062,7 +1062,7 @@
             <div class="container">
                 <h2>Open positions</h2>
                 <div class="openPositions__position-wrapper">
-                    <h3>Senior Front-End Developer</h3>
+                    <h3>Senior DevOps Engineer</h3>
                     <div class="openPositions__details-wrapper">
                         <div>
                             <img
@@ -1076,14 +1076,14 @@
                                 src="img/MapPin-blue_icon.svg"
                                 alt="Map Pin"
                             />
-                            <p>100% Remote</p>
+                            <p>95% Remote</p>
                         </div>
                     </div>
                     <button class="modal5__open">Details</button>
                 </div>
                 <div class="openPositions__position-wrapper">
-                    <h3>Junior Front-End Developer</h3>
-                    <div class="openPositions__details-wrapper">
+                    <h3>Senior Fullstack Developer</h3>
+                    <div class="openPositions__details-wrapper transform">
                         <div>
                             <img
                                 src="img/clock_icon.svg"
@@ -1096,7 +1096,7 @@
                                 src="img/MapPin-blue_icon.svg"
                                 alt="Map Pin"
                             />
-                            <p>100% Remote</p>
+                            <p>80% Remote</p>
                         </div>
                     </div>
                     <button class="modal6__open">Details</button>
@@ -1270,7 +1270,7 @@
                         their specific needs and objectives, allowing us to
                         tailor the platform accordingly.
                     </p>
-                    <div class="items-wrapper">
+                    <div class="items-wrapper two-column">
                         <div class="item">
                             <div class="blue-block">Requirement Analysis</div>
                             <p>
@@ -1602,51 +1602,57 @@
                     </picture>
                     <h3>Challenge</h3>
                     <p>
-                        Our client wanted to re-write an existing application
-                        written in VB.NET into an application based on modern
-                        technologies: Cloud Based, Service-Oriented written in
-                        the latest C# version. A huge part of existing
-                        functionality is now handled by the third-party
-                        solution, so new a new application should have tight
-                        integration with it.
+                        Our client wanted to rewrite an existing legacy
+                        application written in VB.NET into an application based
+                        on modern technologies: Cloud Based, Service-Oriented
+                        written in the latest C# version. A significant part of
+                        the existing functionality is now handled by an external
+                        solution, so the new application provides numerous
+                        interfaces to seamlessly integrate the new landscape
+                        into the existing company infrastructure.
                     </p>
                     <h3>Approach</h3>
                     <p>
-                        We decided to go with Angular as a frontend framework,
-                        .NET (C#) for backend services, SQL Server for
-                        Persistent storage, and Entity Framework as ORM. All
-                        services will be hosted in Azure Kubernetes Service in
-                        an On-premise cluster. First our team analyzed what
-                        functionality is left to be re-implemented, considering
+                        The decision was made to go with Angular as a frontend
+                        framework, .NET Core (C#) for backend services, SQL
+                        Server for the persistence layer, and Entity Framework
+                        as ORM. All services are hosted in Azure Kubernetes
+                        Service in a private cluster. First, our team analyzed
+                        what functionality has to be re-implemented, considering
                         that there is now a third-party solution, and agreed on
-                        integration points. The rest of business logic was
+                        integration points. The rest of the business logic was
                         functionally decoupled into several services that would
-                        be responsible for each aspect of the business flow.
-                        Existing UI of the Desktop application was taken as a
-                        basis for creating a mockup of future UI. Other
+                        be responsible for each aspect of the business flow. The
+                        existing UI of the Desktop application was taken as a
+                        basis for creating a mockup of the future UI. Other
                         references for UI mockups were existing company
                         applications. The goal is to have a consistent design
                         across different client applications. Each component of
                         the system (backend services + UI application) was
-                        developed in isolation, with its own build and release
-                        pipelines and code repositories. The code base that has
-                        to be shared was externalized as a nuget package.
+                        developed in an isolated manner, with its own build and
+                        release pipelines and code repositories. The code base
+                        that has to be shared was externalized as a nuget
+                        package with its own development and delivery lifecycle.
                         Logging is centralized: all logs from all components are
-                        collected in Azure Application Insights. We decided to
-                        use Azure Application Config for managing service
-                        configuration. All components communicate with each
-                        other either through HTTP protocol or through Kafka
-                        message bus. For dynamic UI updates, we used SignalR.
+                        collected in Azure Application Insights, we support
+                        distributed tracing and follow Open Telemetry standards.
+                        We decided to use Azure Application Config for managing
+                        service configuration. All components communicate with
+                        each other either through the HTTPS protocol or through
+                        Kafka message bus. The UI is highly responsive thanks to
+                        the real-time updates and usage of server-to-client
+                        WebSockets communication.
                     </p>
                     <div class="blue-block">Requirement Analysis</div>
                     <p>
                         The application became much more readable and
-                        maintainable: code was re-written in the latest C#
-                        language following SOLID principles and N-tier
-                        architecture. Due to externalizing part of business
-                        logic to third-party system, the company has to maintain
-                        less business logic. UI is now much more pleasant to use
-                        due to re-using of the Angular component library.
+                        maintainable: code was rewritten in the latest C#
+                        language version, following SOLID principles and N-tier
+                        and Microservices architecture. Due to externalizing
+                        part of business logic to a third-party system, the
+                        company has to maintain less business logic. The UI is
+                        now much more comfortable to use due to re-using of the
+                        Angular component library.
                     </p>
                 </div>
 
@@ -1689,7 +1695,7 @@
         <div class="modal modal5">
             <div class="modal__content-wrapper">
                 <div class="modal__scroll">
-                    <h2>Senior Front-End Developer</h2>
+                    <h2>Senior DevOps Engineer</h2>
                     <div class="items-wrapper vacancy">
                         <div>
                             <img
@@ -1703,92 +1709,163 @@
                                 src="img/MapPin-blue_icon.svg"
                                 alt="Map Pin"
                             />
-                            <p>100% Remote</p>
+                            <p>95% Remote</p>
                         </div>
                     </div>
 
-                    <h3>Role</h3>
+                    <h3>Description</h3>
                     <p>
-                        We are seeking a senior frontend engineer experienced
-                        with VueJS, who will be responsible for designing
-                        scalable architectures, collaborating with UI/UX
-                        designers, developing high-quality web applications, and
-                        optimizing performance. As well as ensuring
-                        cross-browser compatibility, implementing accessibility
-                        standards, conducting code reviews, performing testing,
-                        monitoring metrics, providing technical leadership, and
-                        fostering mentorship for continuous growth.
+                        You will work for a German electrical grid operator,
+                        developing a modern SCADA system with the following
+                        capabilities:
                     </p>
-                    <h3>Responsibilities</h3>
+                    <ul class="margin-bottom-12">
+                        <li>
+                            High-frequency sensor data collection (millions of
+                            events per second) real-time monitoring.
+                        </li>
+                        <li>Offshore wind parks operations.</li>
+                        <li>Vessel routing near wind parks.</li>
+                        <li>Forecasting equipment control.</li>
+                        <li>And many more...</li>
+                    </ul>
+                    <p>
+                        The system must be capable of operating completely
+                        isolated, both from network connectivity and power
+                        supply perspective. If the entire region is in a
+                        complete blackout, our system must still be able to
+                        operate the electrical grid.
+                    </p>
+                    <p>
+                        While in development, we use Azure Kubernetes Service,
+                        Azure DevOps, Azure KeyVault, Azure Storage Account, and
+                        some other cloud tools. In production, there is a native
+                        vanilla Kubernetes.
+                    </p>
+                    <p>
+                        We ingest streams of sensor data via Kafka. There is a
+                        sophisticated Kafka streams topology, joining and
+                        transforming the streams of events.
+                    </p>
+                    <p class="margin-bottom-40">
+                        The infrastructure is provisioned via terraform. The
+                        application is deployed via helm charts. CI/CD pipeline
+                        runs on Azure DevOps. We intensively use various
+                        Kubernetes operators (Kafka, Keycloak, and many more).
+                    </p>
+                    <h3>Project technical stack</h3>
                     <div class="items-wrapper">
                         <div class="item">
-                            <div class="blue-block">CMS Integration</div>
-                            <p>
-                                Understand CMS concepts such as content
-                                management workflows, metadata, and templating
-                                systems. Collaborate with cross-functional teams
-                                to integrate AI models into our custom-built CMS
-                                platform, enabling intelligent content
-                                recommendations, automated tagging, and
-                                personalized user experiences, while ensuring
-                                seamless integration with existing CMS
-                                functionalities.
-                            </p>
+                            <div class="blue-block">Azure</div>
+                            <ul>
+                                <li>Azure Kubernetes Service (AKS)</li>
+                                <li>Azure Storage (tables)</li>
+                                <li>Azure Key Vault</li>
+                                <li>Application insights/log analytics</li>
+                            </ul>
                         </div>
                         <div class="item">
                             <div class="blue-block">
-                                Stakeholder Collaboration
+                                Messaging, event streaming
                             </div>
-                            <p>
-                                Collaborate closely with stakeholders to gather
-                                and understand AI requirements, ensuring
-                                alignment between business objectives and AI
-                                capabilities. Effectively communicate knowledge
-                                and processes of existing AI systems to
-                                stakeholders, fostering transparency, and
-                                enabling informed decision-making for successful
-                                AI implementation and adoption.
-                            </p>
+                            <ul>
+                                <li>Kafka</li>
+                                <li>Protobuf</li>
+                            </ul>
                         </div>
                         <div class="item">
-                            <div class="blue-block">
-                                UI/UX Design Collaboration
-                            </div>
-                            <p>
-                                Collaborate with UI/UX designers to translate
-                                design concepts into functional and visually
-                                appealing user interfaces, ensuring a seamless
-                                and intuitive user experience centered around
-                                our AI initiatives.
-                            </p>
+                            <div class="blue-block">Coding</div>
+                            <ul>
+                                <li>C#, .NET Core, .NET 6</li>
+                                <li>Blazor WebAssembly</li>
+                                <li>Git</li>
+                            </ul>
                         </div>
                         <div class="item">
-                            <div class="blue-block">Frontend Architecture</div>
-                            <p>
-                                Design and implement scalable and maintainable
-                                frontend architecture, ensuring modular and
-                                reusable code components using VueJS.
-                            </p>
+                            <div class="blue-block">Infrastructure, DevOps</div>
+                            <ul>
+                                <li>Terraform</li>
+                                <li>Docker, Kubernetes, Helm</li>
+                                <li>Azure DevOps</li>
+                                <li>Azure CLI</li>
+                            </ul>
                         </div>
                         <div class="item">
-                            <div class="blue-block">
-                                Technical Leadership and Mentorship
-                            </div>
-                            <p>
-                                Provide technical leadership and guidance to
-                                junior engineers, mentor team members, and
-                                contribute to the growth and development of the
-                                front-end engineering team.
-                            </p>
+                            <div class="blue-block">Testing</div>
+                            <ul>
+                                <li>xUnit</li>
+                                <li>Unit tests and integration tests</li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="blue-block">Database</div>
+                            <ul>
+                                <li>Postgresql</li>
+                                <li>Neo4j</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3>Requirements</h3>
+                    <div class="items-wrapper">
+                        <div class="item">
+                            <div class="blue-block">Expert</div>
+                            <ul>
+                                <li>Kubernetes (both barebone and AKS)</li>
+                                <li>Terraform</li>
+                                <li>Helm</li>
+                                <li>Kafka</li>
+                                <li>
+                                    In-depth understanding of messaging and
+                                    event streaming concepts
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="blue-block">Advanced</div>
+                            <ul>
+                                <li>
+                                    Azure services preferably from the list
+                                    above
+                                </li>
+                                <li>Azure CLI</li>
+                                <li>PostgreSQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="items-wrapper two-column">
+                        <div class="item">
+                            <h3>Requirements</h3>
+                            <ul>
+                                <li>Advanced English</li>
+                                <li>Excellent communication skills</li>
+                                <li>Architectural thinking</li>
+                                <li>
+                                    Ability to talk to people, find common
+                                    ground and accept compromises
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <h3>Nice to have</h3>
+                            <ul>
+                                <li>
+                                    German is very nice to have, it increases
+                                    the hourly rate
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <h3>Requirements</h3>
                     <ul>
                         <li>
-                            Bachelor's degree in computer science, engineering,
-                            or a related field.
+                            95% remote (2-3 days in Berlin once per quarter)
                         </li>
-                        <li>5 years of experience is preferred</li>
+                        <li>3-Month initial contract (probation period)</li>
+                        <li>B2B (Freelance)</li>
+                        <li>
+                            EU residents only, like citizens, residence permit
+                            holders, Poland Business Harbor visa holders
+                        </li>
                     </ul>
                 </div>
 
@@ -1831,7 +1908,7 @@
         <div class="modal modal6">
             <div class="modal__content-wrapper">
                 <div class="modal__scroll">
-                    <h2>Junior Front-End Developer</h2>
+                    <h2>Senior Fullstack Developer</h2>
                     <div class="items-wrapper vacancy">
                         <div>
                             <img
@@ -1845,92 +1922,109 @@
                                 src="img/MapPin-blue_icon.svg"
                                 alt="Map Pin"
                             />
-                            <p>100% Remote</p>
+                            <p>80% Remote</p>
                         </div>
                     </div>
-
-                    <h3>Role</h3>
-                    <p>
-                        We are seeking a senior frontend engineer experienced
-                        with VueJS, who will be responsible for designing
-                        scalable architectures, collaborating with UI/UX
-                        designers, developing high-quality web applications, and
-                        optimizing performance. As well as ensuring
-                        cross-browser compatibility, implementing accessibility
-                        standards, conducting code reviews, performing testing,
-                        monitoring metrics, providing technical leadership, and
-                        fostering mentorship for continuous growth.
-                    </p>
-                    <h3>Responsibilities</h3>
+                    <h3>Project technical stack</h3>
                     <div class="items-wrapper">
                         <div class="item">
-                            <div class="blue-block">CMS Integration</div>
-                            <p>
-                                Understand CMS concepts such as content
-                                management workflows, metadata, and templating
-                                systems. Collaborate with cross-functional teams
-                                to integrate AI models into our custom-built CMS
-                                platform, enabling intelligent content
-                                recommendations, automated tagging, and
-                                personalized user experiences, while ensuring
-                                seamless integration with existing CMS
-                                functionalities.
-                            </p>
+                            <div class="blue-block">Azure</div>
+                            <ul>
+                                <li>Azure Kubernetes Service (AKS)</li>
+                                <li>Azure Storage (tables)</li>
+                                <li>Azure Key Vault</li>
+                                <li>Application insights/log analytics</li>
+                            </ul>
                         </div>
                         <div class="item">
                             <div class="blue-block">
-                                Stakeholder Collaboration
+                                Messaging, event streaming
                             </div>
-                            <p>
-                                Collaborate closely with stakeholders to gather
-                                and understand AI requirements, ensuring
-                                alignment between business objectives and AI
-                                capabilities. Effectively communicate knowledge
-                                and processes of existing AI systems to
-                                stakeholders, fostering transparency, and
-                                enabling informed decision-making for successful
-                                AI implementation and adoption.
-                            </p>
+                            <ul>
+                                <li>ZeroMQ</li>
+                            </ul>
                         </div>
                         <div class="item">
-                            <div class="blue-block">
-                                UI/UX Design Collaboration
-                            </div>
-                            <p>
-                                Collaborate with UI/UX designers to translate
-                                design concepts into functional and visually
-                                appealing user interfaces, ensuring a seamless
-                                and intuitive user experience centered around
-                                our AI initiatives.
-                            </p>
+                            <div class="blue-block">Coding</div>
+                            <ul>
+                                <li>C#, .NET Core, .NET 6</li>
+                                <li>Blazor WebAssembly</li>
+                                <li>Git</li>
+                            </ul>
                         </div>
                         <div class="item">
-                            <div class="blue-block">Frontend Architecture</div>
-                            <p>
-                                Design and implement scalable and maintainable
-                                frontend architecture, ensuring modular and
-                                reusable code components using VueJS.
-                            </p>
+                            <div class="blue-block">Infrastructure, DevOps</div>
+                            <ul>
+                                <li>Terraform</li>
+                                <li>Docker, Kubernetes, Helm</li>
+                                <li>Azure DevOps</li>
+                                <li>Azure CLI</li>
+                            </ul>
                         </div>
                         <div class="item">
-                            <div class="blue-block">
-                                Technical Leadership and Mentorship
-                            </div>
-                            <p>
-                                Provide technical leadership and guidance to
-                                junior engineers, mentor team members, and
-                                contribute to the growth and development of the
-                                front-end engineering team.
-                            </p>
+                            <div class="blue-block">Testing</div>
+                            <ul>
+                                <li>TBD</li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="blue-block">Database</div>
+                            <ul>
+                                <li>TBD</li>
+                            </ul>
                         </div>
                     </div>
-                    <h3>Requirements</h3>
+                    <h3>Project technical stack</h3>
+                    <div class="items-wrapper">
+                        <div class="item">
+                            <div class="blue-block">Expert</div>
+                            <ul>
+                                <li>.NET 6</li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="blue-block">Advanced</div>
+                            <ul>
+                                <li>
+                                    Azure services preferably from the list
+                                    above
+                                </li>
+                                <li>Blazor</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="items-wrapper two-column">
+                        <div class="item">
+                            <h3>Other requirements</h3>
+                            <ul>
+                                <li>Advanced English</li>
+                                <li>Excellent communication skills</li>
+                                <li>Architectural thinking</li>
+                                <li>
+                                    Ability to talk to people, find common
+                                    ground and accept compromises
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <h3>Nice to have</h3>
+                            <ul>
+                                <li>
+                                    German is very nice to have, it increases
+                                    the hourly rate
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3>Contract conditions</h3>
                     <ul>
+                        <li>80% remote (2-3 days in Hamburg once per month)</li>
+                        <li>3-Month initial contract (probation period)</li>
+                        <li>B2B (Freelance)</li>
                         <li>
-                            Bachelor's degree in computer science, engineering,
-                            or a related field.
+                            EU residents only, like citizens, residence permit
+                            holders, Poland Business Harbor visa holders
                         </li>
-                        <li>5 years of experience is preferred</li>
                     </ul>
                 </div>
 

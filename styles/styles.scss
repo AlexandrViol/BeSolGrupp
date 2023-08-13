@@ -1314,6 +1314,12 @@ section {
             flex-direction: column;
         }
 
+        &:first-of-type {
+            .openPositions__details-wrapper {
+                transform: translateX(12px);
+            }            
+        }
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -1343,6 +1349,10 @@ section {
             margin-bottom: 20px;
             gap: 8px;
             justify-content: center;
+        }
+
+        &.transform {
+            transform: translateX(-10px);
         }
 
         & > div {
