@@ -62,12 +62,14 @@ button {
 
 .input-wrapper {
     padding-top: 10px;
+
     input,
     textarea {
         width: 100%;
         caret-color: $main;
         background-color: $white;
         border: none;
+        border-radius: 0;
         border-bottom: 1px solid $main;
         padding: 12px 0 8px;
         font-size: 16px;
@@ -79,6 +81,7 @@ button {
             width: 0;
             height: 0;
         }
+
         &:focus {
             outline: none;
         }
@@ -94,6 +97,7 @@ button {
             color: $black;
             background-color: white;
         }
+
         &:invalid:not(:focus):not(:placeholder-shown) {
             border-color: $error;
 
@@ -104,6 +108,7 @@ button {
                 color: $error;
             }
         }
+
         &:focus + label,
         &:valid + label {
             color: $gray2;
@@ -111,6 +116,7 @@ button {
             line-height: 20px;
             top: 6px;
         }
+
         &:valid:not(:focus) + label {
             color: $gray2;
         }

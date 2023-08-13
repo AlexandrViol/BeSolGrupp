@@ -234,6 +234,7 @@ button:disabled, .feedback__button:disabled {
   caret-color: #0013ff;
   background-color: #ffffff;
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid #0013ff;
   padding: 12px 0 8px;
   font-size: 16px;
@@ -2164,10 +2165,14 @@ section:first-of-type {
   }
 }
 
+.terms-of-use,
+.privacy-policy {
+  padding-top: 80px !important;
+}
 @media (max-width: 768px) {
   .terms-of-use,
   .privacy-policy {
-    padding-top: 80px;
+    padding-top: 40px !important;
   }
 }
 .terms-of-use h2,
@@ -2184,11 +2189,6 @@ section:first-of-type {
 .terms-of-use h3,
 .privacy-policy h3 {
   margin-bottom: 8px;
-}
-.terms-of-use p,
-.privacy-policy p {
-  font-size: 18px;
-  line-height: 27px;
 }
 .terms-of-use .margin-bottom32,
 .privacy-policy .margin-bottom32 {
@@ -2220,21 +2220,9 @@ section:first-of-type {
     margin-bottom: 6px;
   }
 }
-.terms-of-use li,
-.privacy-policy li {
-  font-size: 18px;
-  line-height: 27px;
-  margin-top: 8px;
-}
-@media (max-width: 768px) {
-  .terms-of-use li,
-  .privacy-policy li {
-    margin-top: 6px;
-  }
-}
-.terms-of-use li:before,
-.privacy-policy li:before {
-  top: 13px;
+.terms-of-use ul,
+.privacy-policy ul {
+  margin-top: 12px;
 }
 
 /*# sourceMappingURL=styles.css.map */
