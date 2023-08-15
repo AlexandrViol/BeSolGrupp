@@ -1317,6 +1317,14 @@ section {
         &:first-of-type {
             .openPositions__details-wrapper {
                 transform: translateX(12px);
+
+                @include lg {
+                    transform: translateX(-12px);
+                }
+
+                @include sm {
+                    transform: translateX(0);
+                }
             }            
         }
 
