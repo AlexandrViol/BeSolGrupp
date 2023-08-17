@@ -1415,6 +1415,9 @@ section {
     h2 {
         margin: 0 0 8px;
         text-align: left;
+        @include sm {
+            font-size: 16px;
+        }
     }
 
     .margin-bottom32 {
